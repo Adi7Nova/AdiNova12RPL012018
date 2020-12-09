@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="ADD DATA"
+            android:textStyle="bold"
+            android:layout_margin="50dp"
+            android:layout_width="match_parent" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:padding="8sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4E4E4E"
+            android:text="MERK"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etNamaUser1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:gravity="top|left"
+            android:hint="Merk yang akan tampil di aplikasi"
+            android:inputType="text"
+            android:textColor="#252525"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:padding="8sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4E4E4E"
+            android:text="JENIS"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etJenis1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:gravity="top|left"
+            android:hint="Jenis yang akan tampil di aplikasi"
+            android:textColor="#252525"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:gravity="center_vertical"
+        android:padding="8sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4E4E4E"
+            android:text="HARGA SEWA"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/Sewa1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:background="#00000000"
+            android:gravity="top|left"
+            android:hint="Harga sewa"
+            android:textColor="@color/colorPrimaryDark"
+            android:enabled="true"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:id="@+id/divTambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="TAMBAH" />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
