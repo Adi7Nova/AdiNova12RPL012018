@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="LoginActivity"
+    tools:context=".LoginActivity"
     android:background="@color/white"
     >
     <ScrollView
@@ -39,14 +39,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textColorHint="#11CFC5"
+                android:textColorHint="#232323"
                 >
                 <EditText
                     android:id="@+id/username"
                     style="@style/modifiedEditText"
                     android:maxLines="1"
                     android:hint="Username"
-                    android:textColor="@color/themeColor"
+                    android:textColor="#232323"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,15 +55,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 app:passwordToggleEnabled="true"
-                android:textColorHint="@color/themeColor">
+                android:textColorHint="#232323">
 
                 <EditText
                     android:id="@+id/password"
                     style="@style/modifiedEditText"
-                    android:hint="password"
+                    android:hint="Password"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:textColor="@color/themeColor"
+                    android:textColor="#232323"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -16,9 +16,7 @@
 
         <RelativeLayout
             android:layout_width="386dp"
-            android:layout_height="770dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp">
+            android:layout_height="770dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -26,13 +24,13 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_centerInParent="true"
-                android:layout_margin="12dp"
+                android:layout_margin="5dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:layout_width="360dp"
-                    android:layout_height="584dp"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
@@ -96,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
                             android:layout_marginRight="30dp"
-                             android:drawablePadding="10dp"
+                            android:drawablePadding="10dp"
                             android:fontFamily="sans-serif-medium"
                             android:hint="Nomor HP"
                             android:inputType="number"
@@ -168,8 +166,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="20dp"
+                        android:background="@color/themeColor"
                         android:text="Register"
-                        android:textColor="#000000" />
+                        android:textColor="@color/white" />
 
                     <TextView
                         android:id="@+id/readyaccount"
@@ -179,6 +178,7 @@
                         android:gravity="center_horizontal"
                         android:text="Already have an account? Login"
                         android:textAlignment="center"
+                        android:textColor="@color/themeColor"
                         android:textSize="15dp"
                         android:textStyle="bold" />
                 </LinearLayout>

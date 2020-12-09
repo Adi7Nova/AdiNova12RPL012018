@@ -6,8 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    >
+    android:background="@color/colorPrimary">
 
 
     <LinearLayout
@@ -15,83 +14,122 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
-
         android:orientation="vertical"
 
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textViewUser"
                 style="@style/viewParent.headerText"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="57dp"
-                android:layout_marginTop="20dp"
+                android:layout_margin="20dp"
                 android:maxLines="1"
-                android:text="ADI " />
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/userpict"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="18dp"
-                app:civ_border_color="@color/imageBorderColor"
-                app:civ_border_width="2dp" />
+                android:text="ADMIN " />
 
         </RelativeLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-
             android:paddingLeft="@dimen/horizontal_dashboard"
             android:paddingTop="@dimen/fab_margin"
             android:paddingRight="@dimen/horizontal_dashboard"
-
-
             android:weightSum="100">
 
-            <ImageView
-                android:layout_width="324dp"
-                android:layout_height="158dp"
+            <LinearLayout
+                android:id="@+id/_firstcoureses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
-                android:layout_weight="60"/>
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/horizontal_card"
+                    android:layout_marginEnd="@dimen/horizontal_card"
+                    android:layout_marginRight="@dimen/horizontal_card"
+                    android:layout_marginBottom="@dimen/horizontal_card"
+
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:foreground="?attr/selectableItemBackground"
+
+
+                    app:cardCornerRadius="@dimen/card_radius"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/themeColor"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/card_view"
+                            android:layout_width="257dp"
+                            android:layout_height="66dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/top_text_card"
+                            android:text="UserName"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/top_text_card"
+                            android:text="Email"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/noktp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/top_text_card"
+                            android:text="No KTP"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/nohp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/top_text_card"
+                            android:text="No HP"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
         </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/horizontal_dashboard"
-
-            android:layout_marginTop="@dimen/normalPadding"
-            android:layout_marginRight="@dimen/horizontal_dashboard"
-
-
-            android:drawablePadding="@dimen/drawable_left"
-
-            android:gravity="center_vertical"
-            android:paddingLeft="@dimen/normalPadding"
-            android:paddingTop="@dimen/vertical_search"
-            android:paddingRight="@dimen/normalPadding"
-            android:paddingBottom="@dimen/vertical_search"
-
-            android:text="Search Here"
-            android:textColor="@color/white"
-
-            android:textSize="14sp">
-
-        </TextView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,13 +142,6 @@
                 android:layout_marginTop="5dp"
                 android:background="@null">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="80dp"
-                    android:orientation="vertical">
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -122,22 +153,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/horizontal_dashboard"
-                        android:layout_marginTop="@dimen/normalPadding"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="@dimen/horizontal_dashboard"
                         android:gravity="center_horizontal"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
                         <androidx.cardview.widget.CardView
-
+                            android:id="@+id/card1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-
                             android:layout_marginTop="@dimen/horizontal_card"
                             android:layout_marginEnd="@dimen/horizontal_card"
                             android:layout_marginRight="@dimen/horizontal_card"
                             android:layout_marginBottom="@dimen/horizontal_card"
-
+                            android:visibility="gone"
                             android:layout_weight="1"
                             android:clickable="true"
                             android:focusable="true"
@@ -150,10 +180,11 @@
                             app:cardPreventCornerOverlap="false">
 
                             <LinearLayout
+                                android:id="@+id/userList"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:background="@color/themeColor">
+                                android:layout_height="183dp"
+                                android:background="@color/themeColor"
+                                android:orientation="vertical">
 
                                 <ImageView
                                     android:id="@+id/card_view_image"
@@ -164,25 +195,11 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_card"
-                                    android:layout_marginRight="@dimen/normalPadding"
-                                    android:text="Design Thinking"
-                                    android:textColor="@color/darkTextColor"
+                                    android:gravity="center"
+                                    android:text="List User"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-                                    android:layout_marginBottom="@dimen/normalPadding"
-
-
-                                    android:text="19 courses"
-                                    android:textSize="11sp" />
 
 
                             </LinearLayout>
@@ -190,11 +207,9 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-
+                            android:id="@+id/card2"
                             android:layout_width="0dp"
-
                             android:layout_height="wrap_content"
-
                             android:layout_marginLeft="@dimen/horizontal_card"
                             android:layout_marginTop="@dimen/horizontal_card"
                             android:layout_marginBottom="@dimen/horizontal_card"
@@ -208,316 +223,42 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:background="@color/themeColor">
+                                android:layout_height="183dp"
+                                android:background="@color/themeColor"
+                                android:orientation="vertical">
 
                                 <ImageView
                                     android:layout_width="match_parent"
-
                                     android:layout_height="@dimen/img_card_height"
                                     android:scaleType="centerCrop"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
                                     android:layout_marginTop="@dimen/top_text_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-
-
-                                    android:text="Coding"
-                                    android:textColor="@color/darkTextColor"
+                                    android:gravity="center"
+                                    android:text="List Sepeda"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-                                    android:layout_marginBottom="@dimen/normalPadding"
-
-                                    android:text="21 courses"
-                                    android:textSize="11sp" />
 
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
+
+
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/ll_secondcoureses"
+                    <Button
+                        android:id="@+id/logout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/horizontal_dashboard"
-                        android:layout_marginTop="@dimen/normalPadding"
-                        android:layout_marginRight="@dimen/horizontal_dashboard"
-                        android:gravity="center_horizontal"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-
-
-                        <androidx.cardview.widget.CardView
-
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-
-                            android:layout_marginTop="@dimen/horizontal_card"
-                            android:layout_marginRight="@dimen/horizontal_card"
-                            android:layout_marginBottom="@dimen/horizontal_card"
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:focusable="true"
-
-                            android:foreground="?attr/selectableItemBackground"
-
-
-                            app:cardCornerRadius="@dimen/card_radius"
-                            app:cardElevation="0dp"
-                            app:cardPreventCornerOverlap="false">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:background="@color/themeColor">
-
-                                <ImageView
-
-                                    android:layout_width="match_parent"
-                                    android:layout_height="@dimen/img_card_height"
-                                    android:scaleType="centerCrop"
-                                    />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-
-
-                                    android:text="Marketing"
-                                    android:textColor="@color/darkTextColor"
-                                    android:textSize="16sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-                                    android:layout_marginBottom="@dimen/normalPadding"
-
-                                    android:text="19 courses"
-                                    android:textSize="11sp" />
-
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-
-                            android:layout_width="0dp"
-
-                            android:layout_height="wrap_content"
-
-                            android:layout_marginLeft="@dimen/horizontal_card"
-                            android:layout_marginTop="@dimen/horizontal_card"
-                            android:layout_marginBottom="@dimen/horizontal_card"
-
-
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:foreground="?attr/selectableItemBackground"
-                            app:cardCornerRadius="@dimen/card_radius"
-                            app:cardElevation="@dimen/card_course_dashboard_elevation">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:background="@color/themeColor">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-
-                                    android:layout_height="@dimen/img_card_height"
-                                    android:scaleType="centerCrop"/>
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-
-
-                                    android:text="Security Expert"
-                                    android:textColor="@color/darkTextColor"
-                                    android:textSize="16sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-                                    android:layout_marginBottom="@dimen/normalPadding"
-
-                                    android:text="21 courses"
-                                    android:textSize="11sp" />
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/horizontal_dashboard"
-                        android:layout_marginTop="@dimen/normalPadding"
-                        android:layout_marginRight="@dimen/horizontal_dashboard"
-                        android:gravity="center_horizontal"
-                        android:orientation="horizontal"
-                        android:weightSum="2"
-                        >
-
-
-                        <androidx.cardview.widget.CardView
-
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-
-                            android:layout_marginTop="@dimen/horizontal_card"
-                            android:layout_marginRight="@dimen/horizontal_card"
-                            android:layout_marginBottom="@dimen/horizontal_card"
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:focusable="true"
-
-                            android:foreground="?attr/selectableItemBackground"
-
-
-                            app:cardCornerRadius="@dimen/card_radius"
-                            app:cardElevation="0dp"
-                            app:cardPreventCornerOverlap="false">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:background="@color/themeColor">
-
-                                <ImageView
-
-                                    android:layout_width="match_parent"
-                                    android:layout_height="@dimen/img_card_height"
-                                    android:scaleType="centerCrop"/>
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-
-
-                                    android:text="Places"
-                                    android:textColor="@color/darkTextColor"
-                                    android:textSize="16sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-                                    android:layout_marginBottom="@dimen/normalPadding"
-
-                                    android:text="19 courses"
-                                    android:textSize="11sp" />
-
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-
-                            android:layout_width="0dp"
-
-                            android:layout_height="wrap_content"
-
-                            android:layout_marginLeft="@dimen/horizontal_card"
-                            android:layout_marginTop="@dimen/horizontal_card"
-                            android:layout_marginBottom="@dimen/horizontal_card"
-
-
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:foreground="?attr/selectableItemBackground"
-                            app:cardCornerRadius="@dimen/card_radius"
-                            app:cardElevation="@dimen/card_course_dashboard_elevation">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:background="@color/themeColor">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-
-                                    android:layout_height="@dimen/img_card_height"
-                                    android:scaleType="centerCrop"
-                                    />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-
-
-                                    android:text="Locations"
-                                    android:textColor="@color/darkTextColor"
-                                    android:textSize="16sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="@dimen/normalPadding"
-                                    android:layout_marginTop="@dimen/top_text_subtitle_card"
-
-                                    android:layout_marginRight="@dimen/normalPadding"
-                                    android:layout_marginBottom="@dimen/normalPadding"
-
-                                    android:text="21 courses"
-                                    android:textSize="11sp" />
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-                    </LinearLayout>
-
+                        android:layout_margin="20dp"
+                        android:background="@color/Transparent"
+                        android:text="Log Out"
+                        android:textColor="@color/darkTextColor"/>
                 </LinearLayout>
             </RelativeLayout>
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>>
+</androidx.core.widget.NestedScrollView>
